@@ -27,9 +27,12 @@
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(ellipse at 30% 50%, rgba(205,183,233,.18) 0%, transparent 60%),
-        radial-gradient(ellipse at 70% 20%, rgba(217,143,179,.12) 0%, transparent 50%);
-    }
+      radial-gradient(ellipse at 80% 50%, rgba(205,183,233,.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 20%, rgba(217,143,179,.2) 0%, transparent 40%),
+      radial-gradient(ellipse at 70% 80%, rgba(201,168,106,.1) 0%, transparent 35%),
+      radial-gradient(ellipse at 30% 50%, rgba(205,183,233,.18) 0%, transparent 60%);
+     }
+    
     .hero-deco {
       position: absolute;
       pointer-events: none;
@@ -37,16 +40,20 @@
       font-family: serif;
       font-weight: 700;
       font-size: clamp(100px, 20vw, 220px);
-      color: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.07);
       line-height: 1;
     }
-    .hero-deco.left        { left: -2%;  bottom: 10%; }
+   
+    .hero-deco.right       { right: 5%;  top: 15%; font-size: clamp(120px, 22vw, 260px); }
+    .hero-deco.mid-right   { right: 20%; top: 5%;  font-size: clamp(80px, 14vw, 180px); }
+    .hero-deco.bottom-right{ right: 8%;  bottom: 5%; font-size: clamp(60px, 10vw, 140px); }
+    /* .hero-deco.left        { left: -2%;  bottom: 10%; }
     .hero-deco.right       { right: -2%; top: 15%; }
     .hero-deco.top-left    { left: -2%;  top: 3%; }
     .hero-deco.bottom-right{ right: -2%; bottom: 3%; }
     .hero-deco.mid-left    { left: 15%;  top: 25%; }
     .hero-deco.centre-top  { left: 45%;  top: -2%; }
-    .hero-deco.mid-right   { right: 15%; top: 1%; }
+    .hero-deco.mid-right   { right: 15%; top: 1%; } */
 
     .hero-content { position: relative; max-width: 1000px; }
 
