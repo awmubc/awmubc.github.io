@@ -27,11 +27,12 @@
       overflow: hidden;
     }
 
-    /* Layer 1 — the actual background image */
     .hero-bg {
       position: absolute;
       inset: 0;
       background: url('/images/HomeBackground.webp') center/cover no-repeat;
+      filter: blur(3px);
+      transform: scale(1.05);
       z-index: 0;
     }
 
@@ -40,29 +41,28 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(
-          ellipse 60% 60% at 50% 50%,
-          rgba(75,31,95,0.82) 0%,
-          rgba(75,31,95,0.70) 35%,
-          rgba(75,31,95,0.35) 65%,
-          rgba(75,31,95,0.10) 100%
-        );
-      z-index: 1;
+      radial-gradient(
+        ellipse 70% 70% at 50% 50%,
+        rgba(75,31,95,0.92) 0%,
+        rgba(75,31,95,0.82) 40%,
+        rgba(75,31,95,0.50) 70%,
+        rgba(75,31,95,0.20) 100%
+      );
+     z-index: 1;
+    }
+    .hero-edge-tint {
+       position: absolute;
+       inset: 0;
+       background: linear-gradient(
+          160deg,
+          rgba(75,31,95,0.65) 0%,
+          transparent 40%,
+          transparent 60%,
+          rgba(109,63,169,0.55) 100%
+      );
+       z-index: 2;
     }
 
-    
-    .hero-edge-tint {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        160deg,
-        rgba(75,31,95,0.45) 0%,
-        transparent 40%,
-        transparent 60%,
-        rgba(109,63,169,0.35) 100%
-      );
-      z-index: 2;
-    }
 
     .hero-content {
       position: relative;
