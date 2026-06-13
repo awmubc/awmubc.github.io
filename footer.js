@@ -38,7 +38,7 @@
           '<h4>Connect</h4>' +
           '<div class="social-links">' +
             '<a href="https://www.instagram.com/awm.ubc" target="_blank" title="Instagram">Instagram</a>' +
-            '<a href="mailto:awm@ubc.ca" title="Email">Email</a>' +
+            '<a href="mailto:awmubc@gmail.com" title="Email">Email</a>' +
           '</div>' +
           '<p style="margin-top: 14px;">awm@ubc.ca<br>UBC Vancouver Campus</p>' +
         '</div>' +
