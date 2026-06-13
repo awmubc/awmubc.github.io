@@ -165,13 +165,12 @@
     margin-top: 40px;
   }
   
-  .highlight-box {
-    background: linear-gradient(135deg, var(--light-lilac), #efe8f9);
-    border-left: 4px solid var(--royal-purple);
-    border-radius: 0 10px 10px 0;
-    padding: 20px 24px;
-    margin: 28px 0;
-  }
+   .highlight-box {
+        background: linear-gradient(135deg, var(--light-lilac), #efe8f9);
+        border-radius: 10px;
+        padding: 20px 24px;
+        margin: 28px 0;
+    }
   .highlight-box p { color: var(--charcoal); }
   
   .stat-box {
