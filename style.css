@@ -425,27 +425,11 @@
   
   
   .page-hero {
-    background: linear-gradient(135deg, var(--deep-plum) 0%, #6b2f82 60%, var(--royal-purple) 100%);
+    background: url('/images/Page_Header.webp') center/cover no-repeat;
     padding: 70px 5% 60px;
     text-align: center;
     position: relative;
     overflow: hidden;
-
-  }
-  
-  /* Refernce: Background code refence from https://www.magicpattern.design/tools/css-backgrounds and Gemini */
-  .page-hero::before {
-    content: '';
-    position: absolute; 
-    inset: 0;
-    background: 
-    radial-gradient(circle, transparent 70%, var(--soft-lavender) 75%, var(--soft-lavender) 80%, transparent 81%), 
-    radial-gradient(circle, transparent 20%, var(--soft-lavender) 21%, var(--soft-lavender) 25%, transparent 26%) 25px 25px, 
-    linear-gradient(var(--royal-purple) 1px, transparent 1px) 0 -1px, 
-    linear-gradient(90deg, var(--royal-purple) 1px, transparent 1px) -1px 0;
-    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
-    opacity: 0.15; 
-    pointer-events: none;
   }
 
   .page-hero h1 { color: #fff; margin-bottom: 12px; position: relative; }
@@ -453,7 +437,6 @@
   
   
   /* FOOTER, Reference: https://math-link-bloom.base44.app */
-  
   .site-footer {
     background: var(--deep-plum);
     padding: 60px 5% 0;
