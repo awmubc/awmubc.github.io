@@ -6,7 +6,7 @@
       '<div class="footer-grid">' +
 
         '<div class="footer-brand">' +
-          '<div class="logo-text">AWM @ UBC</div>' +
+          '<div class="logo-text">WiM @ UBC</div>' +
           '<div class="logo-text para">' +
             '<p>The Association for Women in Mathematics at UBC fosters community, mentorship, and opportunity for women in mathematics.</p>' +
           '</div>' +
