@@ -44,7 +44,7 @@
 
   var logoHTML =
     '<a class="nav-logo" href="/" aria-label="WiM at UBC — Home">' +
-      '<img src="/images/LogoLightMode2.webp" alt="WiM at UBC logo" class="nav-logo-img" />' +
+      '<img src="/images/WiMLogo.webp" alt="WiM at UBC logo" class="nav-logo-img" />' +
       '<span class="nav-logo-text">WiM @ UBC</span>' +
     '</a>';
 
