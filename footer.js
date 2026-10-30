@@ -8,7 +8,7 @@
         '<div class="footer-brand">' +
           '<div class="logo-text">WiM @ UBC</div>' +
           '<div class="logo-text para">' +
-            '<p>The Association for Women in Mathematics at UBC fosters community, mentorship, and opportunity for women in mathematics.</p>' +
+            '<p>The Women in Mathematics at UBC fosters community, mentorship, and opportunity for women in mathematics.</p>' +
           '</div>' +
         '</div>' +
 
@@ -45,7 +45,7 @@
 
       '</div>' +
       '<div class="footer-bottom">' +
-        '<p>© 2026 Association for Women in Mathematics at UBC. All rights reserved.</p>' +
+        '<p>© 2026 Women in Mathematics at UBC. All rights reserved.</p>' +
       '</div>' +
     '</footer>';
 
