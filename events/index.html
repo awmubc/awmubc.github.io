@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events | WiM @ UBC</title>
-  <link rel="icon" type="image/x-icon" href="/images/1.webp">
+  <link rel="icon" type="image/webp" href="/images/WiM.webp">
+  <meta name="theme-color" content="#4B1F5F">
+  <meta property="og:image" content="https://awm.math.ubc.ca/images/WiMLogo.webp">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/animations.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -97,6 +99,38 @@
       #section-past { padding: 24px 16px; }
       .tab-btn { padding: 8px 18px; }
     }
+
+    .event-card.featured { grid-column: 1 / -1; flex-direction: row; }
+    .event-card.featured .event-img { width: 320px; height: auto; min-height: 240px; flex-shrink: 0; }
+    .event-img-rbc {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.2rem; font-weight: 700; color: #fff; letter-spacing: .04em;
+      background: linear-gradient(135deg, var(--deep-plum), var(--royal-purple));
+    }
+    .rbc-art { position: relative; overflow: hidden; }
+    .rbc-art::before {
+      content: "\2211  \03C0  \222B  $  %  \221A  \221E  \0394  \00B1  \2248  \2211  \03C0  \222B  $  %  \221A  \221E  \0394  \00B1  \2248  \2211  \03C0  \222B  $  %  \221A  \221E  \0394";
+      position: absolute; inset: -20% -10%;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.4rem; font-weight: 700; line-height: 1.9; letter-spacing: .5em;
+      color: rgba(255,255,255,.13);
+      transform: rotate(-8deg);
+      pointer-events: none;
+    }
+    .rbc-art::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+      background: linear-gradient(90deg, #C4A96A, #E6D3A3, #C4A96A);
+    }
+    .rbc-art > span { position: relative; z-index: 1; }
+    .event-programme { margin-top: 14px; }
+    .event-programme summary { cursor: pointer; font-weight: 600; color: var(--royal-purple); }
+    .event-programme ul { list-style: none; margin-top: 10px; }
+    .event-programme li { padding: 6px 0; border-bottom: 1px solid rgba(205,183,233,.35); font-size: 0.9rem; }
+    .event-programme li span { display: inline-block; min-width: 74px; font-weight: 600; color: var(--deep-plum); }
+    @media (max-width: 760px) {
+      .event-card.featured { flex-direction: column; }
+      .event-card.featured .event-img { width: 100%; min-height: 120px; }
+    }
   </style>
 </head>
 <body>
@@ -112,7 +146,7 @@
   <div class="tab-bar">
     <div class="tab-container">
       <button id="btn-upcoming" class="tab-btn active" onclick="showTab('upcoming')">Upcoming (1)</button>
-      <button id="btn-past"     class="tab-btn"        onclick="showTab('past')">Past (1)</button>
+      <button id="btn-past"     class="tab-btn"        onclick="showTab('past')">Past (2)</button>
     </div>
   </div>
 
@@ -123,136 +157,20 @@
       <p>Check out what exciting events we have coming up this year.</p>
     </div>
 
-        <div class="card-grid">
-      <div class="event-card reveal delay-1">
-        <div class="event-img">
-          <img src="/images/boba_social.webp" alt="Two boba drinks, brown sugar and taro">
-        </div>
+    <div class="card-grid">
+      <div class="event-card featured reveal">
+        <div class="event-img event-img-rbc rbc-art" aria-hidden="true"><span>WiM &times; RBC</span></div>
         <div class="event-body">
           <div class="event-meta">
-            <span class="event-tag">Social</span>
-            <span class="event-tag">Study</span>
+            <span class="event-tag">Career</span>
+            <span class="event-tag">Networking</span>
           </div>
-          <h3>Boba + Study Social</h3>
-          <p>Bring your notes, enjoy free bubble tea and snacks, and study alongside other students. Everyone is welcome &#10024;</p>
-          <p style="margin-top:10px;">
-            &#128197; Wed, Oct 14<br>
-            &#128376; 5:30 to 7:30 PM<br>
-            &#128205; Math Undergrad Lounge, Math Annex Building (enter via the entrance on Main Mall)
-          </p>
-          <div class="event-footer">
-            <span class="event-date">Spots are limited!</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOvlrZOaEIbQRhWDsg2vTBtYggmlYQn2MbutvKyW7lNo8TZQ/viewform" target="_blank" rel="noopener" class="btn btn-primary">RSVP</a>
-          </div>
+          <h3>WiM x RBC is coming up! &#127881;</h3>
+          <p>Join us for an evening of careers in finance, technology and AI with RBC. More details coming soon, so stay tuned!</p>
+          <p style="margin-top:10px;">&#128197; Friday, November 20, 2026</p>
         </div>
       </div>
     </div>
-    <!-- <div class="card-grid">
-      <div class="event-card reveal delay-1">
-        <div class="event-img">
-          <img src="/images/quant.jpg" alt="Quant and Finance event">
-        </div>
-        <div class="event-body">
-          <div class="event-meta">
-            <span class="event-tag">Finance</span>
-            <span class="event-tag">Panel</span>
-          </div>
-          <h3>Quant &amp; Finance Panel</h3>
-          <p>Industry professionals share their paths into quantitative finance and what a math degree can unlock.</p>
-          <div class="event-footer">
-            <span class="event-date">Winter 2026</span>
-            <a href="#" class="btn btn-primary">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="event-card reveal delay-2">
-        <div class="event-img">
-          <img src="/images/AI.jpg" alt="AI and Tech workshop">
-        </div>
-        <div class="event-body">
-          <div class="event-meta">
-            <span class="event-tag">Tech</span>
-            <span class="event-tag">Workshop</span>
-          </div>
-          <h3>AI &amp; Tech Workshop</h3>
-          <p>Exploring the intersection of mathematics and AI with hands-on examples.</p>
-          <div class="event-footer">
-            <span class="event-date">Fall 2026</span>
-            <a href="#" class="btn btn-primary">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="event-card reveal delay-3">
-        <div class="event-img">
-          <img src="/images/pure_math.jpg" alt="Pure Math talk">
-        </div>
-        <div class="event-body">
-          <div class="event-meta">
-            <span class="event-tag">Research</span>
-            <span class="event-tag">Talk</span>
-          </div>
-          <h3>Pure Math Research Talk</h3>
-          <p>A deep dive into modern research, featuring a UBC faculty speaker.</p>
-          <div class="event-footer">
-            <span class="event-date">Winter 2027</span>
-            <a href="#" class="btn btn-primary">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="event-card reveal delay-2">
-        <div class="event-img">
-          <img src="/images/yoga.jpg" alt="Beach Yoga">
-        </div>
-        <div class="event-body">
-          <div class="event-meta">
-            <span class="event-tag">Wellness</span>
-          </div>
-          <h3>Beach Yoga</h3>
-          <p>Unwinding together by the water, a perfect break from study season.</p>
-          <div class="event-footer">
-            <span class="event-date">Summer 2026</span>
-            <a href="#" class="btn btn-primary">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="event-card reveal delay-3">
-        <div class="event-img">
-          <img src="/images/pilates.jpg" alt="Pilates session">
-        </div>
-        <div class="event-body">
-          <div class="event-meta">
-            <span class="event-tag">Wellness</span>
-          </div>
-          <h3>Pilates Session</h3>
-          <p>Strengthening our bodies and minds together as a community.</p>
-          <div class="event-footer">
-            <span class="event-date">Winter 2026</span>
-            <a href="#" class="btn btn-primary">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="event-card reveal delay-3">
-        <div class="event-img">
-          <img src="/images/girlySocial.jpg" alt="Girly Social">
-        </div>
-        <div class="event-body">
-          <div class="event-meta">
-            <span class="event-tag">Social</span>
-          </div>
-          <h3>Girly Social Talk</h3>
-          <p>A fun afternoon of connection, laughter and good math conversations over snacks.</p>
-          <div class="event-footer">
-            <span class="event-date">Fall 2026</span>
-            <a href="#" class="btn btn-primary">Register</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 
   <div id="section-past" style="display: none;">
@@ -263,6 +181,23 @@
 
       <div class="card-grid">
         <div class="event-card reveal delay-1">
+          <div class="event-img">
+            <img src="/images/boba_social.webp" alt="Two boba drinks, brown sugar and taro">
+          </div>
+          <div class="event-body">
+            <div class="event-meta">
+              <span class="event-tag">Social</span>
+              <span class="event-tag">Study</span>
+            </div>
+            <h3>Boba + Study Social</h3>
+            <p>Students brought their notes, enjoyed free bubble tea and snacks, and studied alongside each other in the Math Undergrad Lounge.</p>
+            <div class="event-footer">
+              <span class="event-date">October 14, 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card reveal delay-2">
           <div class="event-img">
             <img src="/images/MathBuilding104.jpg" alt="Math Building meeting room">
           </div>
