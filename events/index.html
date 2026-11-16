@@ -100,36 +100,37 @@
       .tab-btn { padding: 8px 18px; }
     }
 
-    .event-card.featured { grid-column: 1 / -1; flex-direction: row; }
-    .event-card.featured .event-img { width: 320px; height: auto; min-height: 240px; flex-shrink: 0; }
-    .event-img-rbc {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2.2rem; font-weight: 700; color: #fff; letter-spacing: .04em;
-      background: linear-gradient(135deg, var(--deep-plum), var(--royal-purple));
+    /* Featured event card (WiM x RBC) */
+    .event-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      margin-top: 28px;
     }
-    .rbc-art { position: relative; overflow: hidden; }
-    .rbc-art::before {
-      content: "\2211  \03C0  \222B  $  %  \221A  \221E  \0394  \00B1  \2248  \2211  \03C0  \222B  $  %  \221A  \221E  \0394  \00B1  \2248  \2211  \03C0  \222B  $  %  \221A  \221E  \0394";
-      position: absolute; inset: -20% -10%;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2.4rem; font-weight: 700; line-height: 1.9; letter-spacing: .5em;
-      color: rgba(255,255,255,.13);
-      transform: rotate(-8deg);
-      pointer-events: none;
+    .event-card.featured .event-img {
+      width: 380px;
+      height: auto;
+      min-height: 0;
+      aspect-ratio: 552 / 394;
+      align-self: center;
+      flex-shrink: 0;
+      margin-left: 20px;
+      background: #fff;
     }
-    .rbc-art::after {
-      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
-      background: linear-gradient(90deg, #C4A96A, #E6D3A3, #C4A96A);
-    }
-    .rbc-art > span { position: relative; z-index: 1; }
+    .event-card.featured .event-img img { object-fit: contain; }
+
     .event-programme { margin-top: 14px; }
     .event-programme summary { cursor: pointer; font-weight: 600; color: var(--royal-purple); }
     .event-programme ul { list-style: none; margin-top: 10px; }
     .event-programme li { padding: 6px 0; border-bottom: 1px solid rgba(205,183,233,.35); font-size: 0.9rem; }
-    .event-programme li span { display: inline-block; min-width: 74px; font-weight: 600; color: var(--deep-plum); }
+    .event-programme li span { display: inline-block; min-width: 120px; font-weight: 600; color: var(--deep-plum); }
+
     @media (max-width: 760px) {
       .event-card.featured { flex-direction: column; }
-      .event-card.featured .event-img { width: 100%; min-height: 120px; }
+      .event-card.featured .event-img {
+        width: 100%;
+        margin-left: 0;
+        align-self: stretch;
+      }
     }
   </style>
 </head>
@@ -157,42 +158,42 @@
       <p>Check out what exciting events we have coming up this year.</p>
     </div>
 
-      <div class="event-card featured reveal">
-        <div class="event-img">
-            <img src="/images/WiMxRBC.webp" alt="Networking event with RBC professionals">
+    <div class="event-card featured reveal">
+      <div class="event-img">
+        <img src="/images/WiMxRBC.webp" alt="Networking event with RBC professionals">
+      </div>
+      <div class="event-body">
+        <div class="event-meta">
+          <span class="event-tag">Career</span>
+          <span class="event-tag">Panel</span>
+          <span class="event-tag">Networking</span>
         </div>
-        <div class="event-body">
-          <div class="event-meta">
-            <span class="event-tag">Career</span>
-            <span class="event-tag">Panel</span>
-            <span class="event-tag">Networking</span>
-          </div>
-          <h3>WiM x RBC</h3>
-          <p>Join us for an evening with RBC professionals from finance, technology and RBC Borealis, RBC&#39;s AI research institute. It is also a great chance to learn about internship and early-career opportunities at RBC. Students from all programs are welcome.</p>
-          <p style="margin-top:10px;">
-            &#128197; Friday, November 20, 2026<br>
-            &#128336; 5:30 to 8:00 PM<br>
-            &#128205; Mathematics Building, Room 100 (MATH 100)
-          </p>
-          <details class="event-programme">
-            <summary>See the programme for the evening</summary>
-            <ul>
-              <li><span>Doors open</span> Check in, grab some food and settle in</li>
-              <li><span>Welcome</span> Welcome from the WiM team</li>
-              <li><span>Panel 1</span> Finance and Wealth</li>
-              <li><span>Talk</span> Spotlight talk</li>
-              <li><span>Icebreakers</span> A fun way to meet other attendees</li>
-              <li><span>Talk</span> Spotlight talk</li>
-              <li><span>Panel 2</span> Tech and AI</li>
-              <li><span>Networking</span> Meet RBC speakers and recruiters</li>
-            </ul>
-          </details>
-          <div class="event-footer">
-            <span class="event-date">Register by Tuesday, November 17</span>
-            <a href="https://ubc.ca1.qualtrics.com/jfe/form/SV_4SjJO2XGzNVMYt0" target="_blank" rel="noopener" class="btn btn-primary">Register</a>
-          </div>
+        <h3>WiM x RBC</h3>
+        <p>Join us for an evening with RBC professionals from finance, technology and RBC Borealis, RBC&#39;s AI research institute. It is also a great chance to learn about internship and early-career opportunities at RBC. Students from all programs are welcome.</p>
+        <p style="margin-top:10px;">
+          &#128197; Friday, November 20, 2026<br>
+          &#128336; 5:30 to 8:00 PM<br>
+          &#128205; Mathematics Building, Room 100 (MATH 100)
+        </p>
+        <details class="event-programme">
+          <summary>See the programme for the evening</summary>
+          <ul>
+            <li><span>Doors open</span> Check in, grab some food and settle in</li>
+            <li><span>Welcome</span> Welcome from the WiM team</li>
+            <li><span>Panel 1</span> Finance and Wealth</li>
+            <li><span>Talk</span> Spotlight talk</li>
+            <li><span>Icebreakers</span> A fun way to meet other attendees</li>
+            <li><span>Talk</span> Spotlight talk</li>
+            <li><span>Panel 2</span> Tech and AI</li>
+            <li><span>Networking</span> Meet RBC speakers and recruiters</li>
+          </ul>
+        </details>
+        <div class="event-footer">
+          <span class="event-date">Register by Tuesday, November 17</span>
+          <a href="https://ubc.ca1.qualtrics.com/jfe/form/SV_4SjJO2XGzNVMYt0" target="_blank" rel="noopener" class="btn btn-primary">Register</a>
         </div>
       </div>
+    </div>
 
   </div>
 
